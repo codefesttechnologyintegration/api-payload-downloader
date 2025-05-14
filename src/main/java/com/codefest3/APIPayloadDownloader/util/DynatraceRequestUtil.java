@@ -23,7 +23,7 @@ public class DynatraceRequestUtil {
                 .correlationId("f47ac10b")
                 .logTimestamp(LocalDateTime.now().minusHours(1))
                 .payload(null)
-                .drillDownOptions(Arrays.asList("Name", "Address","roomInfo","Payment"))
+                .drillDownOptions(Arrays.asList("Select Option", "Name", "Address","roomInfo","Payment"))
                 .build();
 
         ApiPayloadResponse.PayloadDetails payload2 = ApiPayloadResponse.PayloadDetails.builder()
@@ -32,7 +32,7 @@ public class DynatraceRequestUtil {
                 .correlationId("f47ac10b")
                 .logTimestamp(LocalDateTime.now().minusHours(2))
                 .payload(null)
-                .drillDownOptions(Arrays.asList("Name", "roomInfo"))
+                .drillDownOptions(Arrays.asList("Select Option", "Name", "roomInfo"))
                 .build();
 
         ApiPayloadResponse.PayloadDetails payload3 = ApiPayloadResponse.PayloadDetails.builder()
@@ -41,7 +41,7 @@ public class DynatraceRequestUtil {
                 .correlationId("f47ac10b")
                 .logTimestamp(LocalDateTime.now().minusHours(3))
                 .payload(null)
-                .drillDownOptions(Arrays.asList("Name", "Address","roomInfo"))
+                .drillDownOptions(Arrays.asList("Select Option", "Name", "Address","roomInfo"))
                 .build();
 
         // Create a list of PayloadDetails
