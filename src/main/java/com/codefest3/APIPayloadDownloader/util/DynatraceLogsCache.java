@@ -1,5 +1,6 @@
 package com.codefest3.APIPayloadDownloader.util;
 
+import com.codefest3.APIPayloadDownloader.constants.ApiPayloadConstants;
 import com.codefest3.APIPayloadDownloader.model.response.ApiPayloadContent;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ public class DynatraceLogsCache {
 
         // Sample data for PayloadDetails
         ApiPayloadContent payload1 = ApiPayloadContent.builder()
-                .payload("sample Payload 1")
+                .payload(ApiPayloadConstants.orderPayloadSample1)
                 .build();
         return payload1;
     }
@@ -26,7 +27,7 @@ public class DynatraceLogsCache {
 
         // Sample data for PayloadDetails
         ApiPayloadContent payload1 = ApiPayloadContent.builder()
-                .payload("sample Drill Down Payload 1")
+                .payload(ApiPayloadConstants.orderDrillDownPayment)
                 .build();
         return payload1;
     }

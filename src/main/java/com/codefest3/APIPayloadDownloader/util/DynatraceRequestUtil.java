@@ -18,26 +18,34 @@ public class DynatraceRequestUtil {
 
         // Sample data for PayloadDetails
         ApiPayloadResponse.PayloadDetails payload1 = ApiPayloadResponse.PayloadDetails.builder()
-                .serviceName("ServiceA")
-                .confirmationNumber("12345")
-                .correlationId("abcde-12345")
-                .logTimestamp(LocalDateTime.now().minusHours(2))
+                .serviceName("Place Order")
+                .confirmationNumber("890111")
+                .correlationId("f47ac10b")
+                .logTimestamp(LocalDateTime.now().minusHours(1))
                 .payload(null)
-                .drillDownOptions(Arrays.asList("Name", "Address","Payment"))
+                .drillDownOptions(Arrays.asList("Name", "Address","roomInfo","Payment"))
                 .build();
 
         ApiPayloadResponse.PayloadDetails payload2 = ApiPayloadResponse.PayloadDetails.builder()
-                .serviceName("ServiceB")
-                .confirmationNumber("67890")
-                .correlationId("fghij-67890")
+                .serviceName("Reservation Delivery")
+                .confirmationNumber("890111")
+                .correlationId("f47ac10b")
                 .logTimestamp(LocalDateTime.now().minusHours(2))
                 .payload(null)
-                .logTimestamp(LocalDateTime.now())
-                .drillDownOptions(Arrays.asList("Name", "Address","Payment"))
+                .drillDownOptions(Arrays.asList("Name", "roomInfo"))
+                .build();
+
+        ApiPayloadResponse.PayloadDetails payload3 = ApiPayloadResponse.PayloadDetails.builder()
+                .serviceName("Reservation Create/Modify")
+                .confirmationNumber("890111")
+                .correlationId("f47ac10b")
+                .logTimestamp(LocalDateTime.now().minusHours(3))
+                .payload(null)
+                .drillDownOptions(Arrays.asList("Name", "Address","roomInfo"))
                 .build();
 
         // Create a list of PayloadDetails
-        List<ApiPayloadResponse.PayloadDetails> payloadDetailsList = Arrays.asList(payload1, payload2);
+        List<ApiPayloadResponse.PayloadDetails> payloadDetailsList = Arrays.asList(payload1, payload2, payload3);
 
         // Build the ApiPayloadResponse object
         ApiPayloadResponse apiPayloadResponse = new ApiPayloadResponse();
